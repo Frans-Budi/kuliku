@@ -22,10 +22,11 @@ let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY) {
-        console.log("We are going Down");
+        header.classList.add('header-hidden');
     } else {
-        console.log("We are going Up");
+        header.classList.remove('header-hidden');
     }
+    lastScrollY = window.scrollY;
 }
 
 );

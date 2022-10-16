@@ -42,7 +42,8 @@ a {
 body,
 html {
     height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    // overflow: hidden;
 }
 
 h2 {
@@ -50,7 +51,9 @@ h2 {
     font-weight: 900;
 }
 
-
+.header-hidden {
+    transform: translateY(-80px);
+}
 
 header {
     width: 100%;
@@ -61,6 +64,7 @@ header {
     top: 0;
     padding: 0 5%;
     @include flexV_center();
+    transition: transform 0.3s;
 
     .logo {
         @include flexV_center();
