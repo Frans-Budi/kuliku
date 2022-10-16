@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 900;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #CBCBCB;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 60px;
+  float: left;
+  padding-right: 10px;
+}
+header .logo span {
+  font-size: 32px;
+  font-weight: 900;
+}
+header .navigator {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 2;
+  text-align: center;
+}
+header .navigator a {
+  font-size: 1.5vmax;
+  font-weight: 400;
+  line-height: 10vh;
+  padding: 0 0.8em;
+  transition: all 0.2s ease-out;
+}
+header .navigator a:hover {
+  background-color: #d7d7d7;
+  cursor: pointer;
+}
+header .navigator a:active {
+  background-color: #e6e6e6;
+}
+header .navigator .home {
+  font-weight: bold;
+}
+header .download {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  justify-content: space-evenly;
+}
+header .download img {
+  height: 3.2vmax;
+}
+header .media-sosial {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  justify-content: space-evenly;
+}
+header .media-sosial img {
+  height: 3.2vmax;
+  transition: all 0.3s ease;
+}
+header .media-sosial img:hover {
+  cursor: pointer;
+  transform: scale(0.8);
+}
+header .media-sosial img:active {
+  transition: all 0s;
+  filter: invert(24%) sepia(11%) saturate(9%) hue-rotate(358deg) brightness(90%) contrast(85%);
+}
+header .hambuger-bar {
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+header .hambuger-bar input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+header .hambuger-bar input:checked {
+  left: -5px;
+  top: -3px;
+}
+header .hambuger-bar input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg);
+}
+header .hambuger-bar input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+header .hambuger-bar input:checked ~ span:last-child {
+  transform: rotate(-45deg);
+}
+header .hambuger-bar span {
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #151515;
+  display: block;
+  transition: all 0.3s;
+}
+header .hambuger-bar span:nth-child(2) {
+  transform-origin: 0 0;
+}
+header .hambuger-bar span:last-child {
+  transform-origin: 0 100%;
+}
+
+.content-1 {
+  margin-top: 80px;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.content-1 .bg-1 {
+  height: 100%;
+  width: 45%;
+  background-image: url("Gambar/bg_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-1 .bg-1 .absolute {
+  position: absolute;
+  width: 40%;
+  z-index: 1;
+}
+.content-1 .bg-1 .absolute .box {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+.content-1 .bg-1 .absolute .box h1 {
+  font-weight: 900;
+  font-size: 84px;
+  color: #151515;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.content-1 .bg-1 .absolute .box h2 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #151515;
+  line-height: 1.2;
+}
+.content-1 .bg-1 .absolute .one {
+  margin-bottom: 40px;
+}
+.content-1 img {
+  position: absolute;
+  width: 65%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-22%);
+}
+.content-1 span {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  border-radius: 0;
+}
+
+.content-2 {
+  position: relative;
+  background-color: #CBCBCB;
+}
+.content-2 video {
+  width: 100%;
+}
+
+.content-3 {
+  width: 100%;
+  background-image: url("Gambar/image_indonesia.png"), linear-gradient(to bottom, rgba(189, 189, 189, 0.4), #BDBDBD);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.content-3 h2 {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.content-3 .box {
+  width: 55%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-3 .box .col {
+  padding-right: 15px;
+}
+.content-3 .box .row {
+  padding-bottom: 5%;
+}
+.content-3 .box li {
+  list-style-type: "- ";
+  list-style-position: outside;
+}
+.content-3 img {
+  width: 30%;
+  position: absolute;
+  bottom: 3.2%;
+  z-index: 1;
+}
+.content-3 span {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.content-4 {
+  background-image: url("Gambar/bg_2.png"), linear-gradient(to bottom, #BDBDBD, white);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.content-4 .container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+.content-4 .container h2 {
+  font-weight: 900;
+  align-self: flex-start;
+  margin-left: 20%;
+}
+.content-4 .container .box {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  border-radius: 20px;
+  padding: 20px 40px;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  width: 80%;
+}
+.content-4 .container .box h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.content-4 .container .box p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.content-4 img {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  transform: translate(55%, -45%);
+}
+
+.content-5 {
+  position: relative;
+}
+.content-5 video {
+  width: 100%;
+}
+
+.content-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
+  position: relative;
+  overflow: hidden;
+}
+.content-6::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("Gambar/bg_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+  transform: rotate(-30deg);
+  position: absolute;
+  z-index: 1;
+}
+.content-6 h2 {
+  z-index: 2;
+  margin-top: 2%;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+.content-6 .container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  z-index: 2;
+}
+.content-6 .container .col {
+  padding: 50% 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.content-6 .container .col img {
+  width: 80%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(0, -50%);
+}
+.content-6 .container .col .box {
+  width: 90%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  border: 3px solid white;
+  background-color: rgba(165, 165, 165, 0.7);
+  border-radius: 20px;
+  padding: 35% 8%;
+}
+.content-6 .container .col .box p {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-7 {
+  width: 100%;
+  padding: 20% 0;
+  background-image: url("Gambar/bg_3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.content-7 .box {
+  width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid #989AA0;
+  background-color: rgba(203, 203, 203, 0.15);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  padding: 2% 10%;
+  position: absolute;
+  top: 0;
+}
+.content-7 .container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.content-7 .container .col {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-7 .container .col .row {
+  width: 75%;
+  position: relative;
+  border-radius: 8px;
+}
+.content-7 .container .col .row img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.content-7 .container .col .row-1 {
+  background-image: linear-gradient(to bottom, #FFE259, #FFA751);
+  z-index: 1;
+  height: 200px;
+}
+.content-7 .container .col .row-1 img {
+  width: 140%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.content-7 .container .col .row-2 {
+  background-image: linear-gradient(to bottom, #FF512F, #DD2476);
+  z-index: 1;
+  height: 200px;
+}
+.content-7 .container .col .row-2 img {
+  width: 150%;
+  left: 50%;
+  transform: translate(-55%);
+}
+.content-7 .container .col .row-3 {
+  background-image: linear-gradient(to bottom, #1D976C, #93F9B9);
+  z-index: 1;
+  height: 200px;
+}
+.content-7 .container .col .row-3 img {
+  width: 106%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.content-7 .container .col .row-4 {
+  background-image: linear-gradient(to bottom, #1FA2FF, #A6FFCB);
+  z-index: 1;
+  height: 200px;
+}
+.content-7 .container .col .row-4 img {
+  width: 102%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.content-7 .container .col .kotak {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10%;
+  margin-top: -10px;
+}
+.content-7 .container .col .kotak p {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.content-8 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #1FA2FF;
+  height: 90vh;
+}
+.content-8 img {
+  width: 70%;
+}
+.content-8 span {
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}/*# sourceMappingURL=stysheet.css.map */
