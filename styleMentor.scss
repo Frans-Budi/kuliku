@@ -1,0 +1,85 @@
+$color_grey: #CBCBCB;
+$color_black: #151515;
+
+@mixin bg_cover ($imageUrl) {
+    background-image: url($imageUrl);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin bg_cover_gradient ($imageUrl, $linear_gradient) {
+    background-image: url($imageUrl), $linear_gradient;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.konten-1 {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    @include bg_cover('Gambar/bg_2.png');
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+    overflow: hidden;
+    position: relative;
+
+    .box {
+        width: 70%;
+        background-color: #E8E8E8;
+        padding: 2%;
+        border-radius: 20px;
+        border: 8px solid white;
+        box-shadow: 0 0 7px 5px rgba(#000, 0.2);
+
+        .mentor {
+            width: fit-content;
+            font-size: 2.2rem;
+            color: white;
+            font-weight: bold;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+            padding: 1% 8% 1% 6%;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .yufi {
+        // position: absolute;
+        // bottom: 0;
+        // right: 0;
+        // transform: translate(-5%, 28%);
+
+        img {
+            position: absolute;
+        }
+
+        .ornamen {
+            height: 100vh;
+            bottom: 0;
+            right: 0;
+            transform: translate(0, 28%);
+        }
+
+        .kak-yufi {
+            height: 85vh;
+            bottom: 0;
+            right: 0;
+            transform: translate(-43%, 2%);
+        }
+    }
+
+
+}

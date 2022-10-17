@@ -1,0 +1,57 @@
+.konten-1 {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  background-image: url("Gambar/bg_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10%;
+  overflow: hidden;
+  position: relative;
+}
+.konten-1 .box {
+  width: 70%;
+  background-color: #E8E8E8;
+  padding: 2%;
+  border-radius: 20px;
+  border: 8px solid white;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.2);
+}
+.konten-1 .box .mentor {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2.2rem;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  padding: 1% 8% 1% 6%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.konten-1 .box h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+.konten-1 .box p {
+  font-size: 2rem;
+}
+.konten-1 .yufi img {
+  position: absolute;
+}
+.konten-1 .yufi .ornamen {
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 28%);
+}
+.konten-1 .yufi .kak-yufi {
+  height: 85vh;
+  bottom: 0;
+  right: 0;
+  transform: translate(-43%, 2%);
+}/*# sourceMappingURL=styleMentor.css.map */

@@ -72,11 +72,12 @@ $color_black: #151515;
     }
 
     .content-1 {
-        height: 70%;
+        height: 50vh;
 
         .bg-1 {
             width: 100%;
             align-items: flex-start;
+            height: 100%;
 
             .absolute {
                 width: 60%;
@@ -265,11 +266,12 @@ $color_black: #151515;
     }
 
     .content-1 {
-        height: 90%;
+        height: calc(100vh - 60px);
         margin-top: 60px;
 
         .bg-1 {
             align-items: center;
+            height: 100%;
 
             .absolute {
                 width: 100%;

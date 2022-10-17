@@ -53,11 +53,12 @@
     display: flex;
   }
   .content-1 {
-    height: 70%;
+    height: 50vh;
   }
   .content-1 .bg-1 {
     width: 100%;
     align-items: flex-start;
+    height: 100%;
   }
   .content-1 .bg-1 .absolute {
     width: 60%;
@@ -192,11 +193,12 @@
     opacity: 1;
   }
   .content-1 {
-    height: 90%;
+    height: calc(100vh - 60px);
     margin-top: 60px;
   }
   .content-1 .bg-1 {
     align-items: center;
+    height: 100%;
   }
   .content-1 .bg-1 .absolute {
     width: 100%;
