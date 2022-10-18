@@ -54,4 +54,52 @@
   bottom: 0;
   right: 0;
   transform: translate(-43%, 2%);
+}
+
+.konten-2 {
+  display: grid;
+  grid-template-areas: "title title title title " "expertise1 expertise2 expertise3 expertise4";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1.5fr;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  padding: 2% 8% 8% 8%;
+  background-image: url("Gambar/bg_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+}
+.konten-2 h2 {
+  grid-area: title;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.konten-2 .box {
+  background-color: #3F3F3F;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.konten-2 .box img {
+  height: 60%;
+}
+.konten-2 .box p {
+  color: white;
+  text-align: center;
+}
+.konten-2 .box1 {
+  grid-area: expertise1;
+}
+.konten-2 .box2 {
+  grid-area: expertise2;
+}
+.konten-2 .box3 {
+  grid-area: expertise3;
+}
+.konten-2 .box4 {
+  grid-area: expertise4;
 }/*# sourceMappingURL=styleMentor.css.map */

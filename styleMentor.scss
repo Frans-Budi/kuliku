@@ -1,5 +1,6 @@
 $color_grey: #CBCBCB;
 $color_black: #151515;
+$color_box: #3F3F3F;
 
 @mixin bg_cover ($imageUrl) {
     background-image: url($imageUrl);
@@ -14,6 +15,7 @@ $color_black: #151515;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 .konten-1 {
     height: calc(100vh - 80px);
@@ -82,4 +84,59 @@ $color_black: #151515;
     }
 
 
+}
+
+.konten-2 {
+    display: grid;
+    grid-template-areas:
+        'title title title title '
+        'expertise1 expertise2 expertise3 expertise4'
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1.5fr;
+    column-gap: 5%;
+    padding: 2% 8% 8% 8%;
+    @include bg_cover('Gambar/bg_1.png');
+    background-position: top;
+
+    h2 {
+        grid-area: title;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .box {
+        background-color: $color_box;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            height: 60%;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+    }
+
+    .box1 {
+        grid-area: expertise1;
+    }
+
+    .box2 {
+        grid-area: expertise2;
+    }
+
+    .box3 {
+        grid-area: expertise3;
+    }
+
+    .box4 {
+        grid-area: expertise4;
+    }
 }
