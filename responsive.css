@@ -28,6 +28,7 @@
   }
   header .navigator a {
     font-size: 2.6vmax;
+    line-height: 7vh;
   }
   header .media-sosial {
     position: fixed;
@@ -139,6 +140,29 @@
   .content-7 .container .col {
     width: 50%;
     padding: 5% 0;
+  }
+  .content-8 img {
+    width: 85%;
+  }
+  .content-8 span {
+    font-size: 1.5rem;
+  }
+  .content-9 {
+    grid-template-areas: "title title title title title title" "teuku teuku teuku frans frans frans" "farhan farhan farhan fazry fazry fazry" "amel amel amel hilda hilda hilda" "yufi yufi yufi rio rio rio" "quote quote quote quote quote quote";
+    row-gap: 5%;
+    padding-bottom: 140%;
+  }
+  .content-9 .fazry {
+    width: auto;
+  }
+  .content-9 .amel {
+    width: auto;
+  }
+  .content-9 .quote p {
+    font-size: 1.6rem;
+  }
+  .content-9 .container .head {
+    transform: translateY(-50%);
   }
 }
 @media (max-width: 600px) {
@@ -260,5 +284,23 @@
   .content-7 .container .col {
     width: 100%;
     padding: 10% 0;
+  }
+  .content-8 img {
+    width: 95%;
+  }
+  .content-8 span {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .content-9 {
+    grid-template-areas: "title title title title title title" "teuku teuku teuku teuku teuku teuku" "frans frans frans frans frans frans" "farhan farhan farhan farhan farhan farhan" "fazry fazry fazry fazry fazry fazry" "amel amel amel amel amel amel" "hilda hilda hilda hilda hilda hilda" "rio rio rio rio rio rio" "yufi yufi yufi yufi yufi yufi" "quote quote quote quote quote quote";
+    row-gap: 3%;
+    padding-bottom: 300%;
+  }
+  .content-9 .quote {
+    margin-top: -25%;
+  }
+  .content-9 .quote p {
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=responsive.css.map */

@@ -41,6 +41,7 @@ $color_black: #151515;
 
             a {
                 font-size: 2.6vmax;
+                line-height: 7vh;
             }
         }
 
@@ -195,6 +196,52 @@ $color_black: #151515;
             .col {
                 width: 50%;
                 padding: 5% 0;
+            }
+        }
+    }
+
+    .content-8 {
+
+        img {
+            width: 85%;
+        }
+
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+    .content-9 {
+        grid-template-areas:
+            "title title title title title title"
+            "teuku teuku teuku frans frans frans"
+            "farhan farhan farhan fazry fazry fazry"
+            "amel amel amel hilda hilda hilda"
+            "yufi yufi yufi rio rio rio"
+            "quote quote quote quote quote quote"
+        ;
+        row-gap: 5%;
+        padding-bottom: 140%;
+
+        .fazry {
+            width: auto;
+        }
+
+        .amel {
+            width: auto;
+        }
+
+        .quote {
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        .container {
+
+            .head {
+                transform: translateY(-50%);
             }
         }
     }
@@ -370,6 +417,43 @@ $color_black: #151515;
             .col {
                 width: 100%;
                 padding: 10% 0;
+            }
+        }
+    }
+
+    .content-8 {
+
+        img {
+            width: 95%;
+        }
+
+        span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    .content-9 {
+        grid-template-areas:
+            "title title title title title title"
+            "teuku teuku teuku teuku teuku teuku"
+            "frans frans frans frans frans frans"
+            "farhan farhan farhan farhan farhan farhan"
+            "fazry fazry fazry fazry fazry fazry"
+            "amel amel amel amel amel amel"
+            "hilda hilda hilda hilda hilda hilda"
+            "rio rio rio rio rio rio"
+            "yufi yufi yufi yufi yufi yufi"
+            "quote quote quote quote quote quote"
+        ;
+        row-gap: 3%;
+        padding-bottom: 300%;
+
+        .quote {
+            margin-top: -25%;
+
+            p {
+                font-size: 1.3rem;
             }
         }
     }

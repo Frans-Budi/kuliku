@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Sans-serif;
 }
 
 $color_grey: #CBCBCB;
@@ -371,9 +371,9 @@ header {
 
     img {
         position: absolute;
-        width: 60%;
+        width: 45%;
         top: 50%;
-        transform: translate(55%, -45%);
+        transform: translate(90%, -45%);
     }
 }
 
@@ -453,7 +453,7 @@ header {
 
 .content-7 {
     width: 100%;
-    padding: 20% 0;
+    padding: 16% 0 8% 0;
     @include bg_cover('Gambar/bg_3.png');
     display: flex;
     flex-direction: column;
@@ -565,8 +565,9 @@ header {
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: #ff1f50;
-    height: 90vh;
+    height: fit-content;
+    padding: 6% 0;
+    @include bg_cover('Gambar/bg-4.png');
 
     img {
         width: 70%;
@@ -577,5 +578,141 @@ header {
         color: white;
         font-size: 32px;
         text-align: center;
+    }
+}
+
+.content-9 {
+    @include bg_cover('Gambar/bg_3.png');
+    padding: 2% 8% 50% 8%;
+    display: grid;
+    grid-template-areas:
+        "title title title title title title"
+        "teuku teuku frans frans farhan farhan"
+        "fazry fazry fazry amel amel amel"
+        "hilda hilda yufi yufi rio rio"
+        "quote quote quote quote quote quote"
+    ;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 3.5%;
+    row-gap: 10%;
+    justify-items: center;
+
+    h2 {
+        grid-area: title;
+    }
+
+    .teuku {
+        grid-area: teuku;
+    }
+
+    .frans {
+        grid-area: frans;
+    }
+
+    .farhan {
+        grid-area: farhan;
+    }
+
+    .fazry {
+        width: 70%;
+        grid-area: fazry;
+        justify-self: end;
+    }
+
+    .amel {
+        width: 70%;
+        grid-area: amel;
+        justify-self: start;
+    }
+
+    .hilda {
+        grid-area: hilda;
+    }
+
+    .yufi {
+        grid-area: yufi;
+    }
+
+    .rio {
+        grid-area: rio;
+    }
+
+    .quote {
+        grid-area: quote;
+        border: 1px solid #9B9C9E;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(#fff, 0.3);
+        padding: 1em 2em;
+        margin-top: -10%;
+
+        p {
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.2;
+            height: fit-content;
+
+            span {
+                font-weight: 900;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 4px solid white;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px 7px rgba(#000, 0.2);
+        background-color: rgba(#fff, 0.3);
+        position: relative;
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            transform: translateY(-42%);
+
+            img {
+                width: 35%;
+            }
+
+            p {
+                width: fit-content;
+                font-size: 2rem;
+                font-weight: 900;
+                color: $color_black;
+                font-style: italic;
+                background-color: rgba($color: white, $alpha: 0.25);
+                border: 2px solid #9B9C9E;
+                border-radius: 10px;
+                padding: 0 0.8em;
+                line-height: 1.2;
+                backdrop-filter: blur(15px);
+                margin-top: -20px;
+            }
+        }
+
+        .body {
+            position: relative;
+            padding: 4%;
+            text-align: center;
+
+            ul {
+                margin-top: 23%;
+                list-style: none;
+                font-size: 1.1rem;
+
+                li::before {
+                    content: '- ';
+                }
+            }
+        }
+
     }
 }
