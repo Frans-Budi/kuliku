@@ -69,14 +69,14 @@ $color_box: #3F3F3F;
         }
 
         .ornamen {
-            height: 100vh;
+            width: 50%;
             bottom: 0;
             right: 0;
             transform: translate(0, 28%);
         }
 
         .kak-yufi {
-            height: 85vh;
+            width: 25%;
             bottom: 0;
             right: 0;
             transform: translate(-43%, 2%);
@@ -93,7 +93,7 @@ $color_box: #3F3F3F;
         'expertise1 expertise2 expertise3 expertise4'
     ;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1.5fr;
+    // grid-template-rows: 1fr 1.5fr;
     column-gap: 5%;
     padding: 2% 8% 8% 8%;
     @include bg_cover('Gambar/bg_1.png');
@@ -106,6 +106,7 @@ $color_box: #3F3F3F;
     }
 
     .box {
+        height: 100%;
         background-color: $color_box;
         padding: 20px;
         border-radius: 12px;
@@ -157,6 +158,7 @@ $color_box: #3F3F3F;
         column-gap: 6%;
 
         .box {
+            height: min-content;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -205,6 +207,223 @@ $color_box: #3F3F3F;
             p {
                 font-size: 1.8rem;
                 font-weight: 900;
+            }
+        }
+    }
+}
+
+// Responsivq1e
+@media (max-width: 1000px) {
+    .konten-1 {
+        height: 40%;
+
+        .box {
+            width: 70%;
+            border-radius: 16px;
+            border: 6px solid white;
+
+            .mentor {
+                font-size: 1.5rem;
+
+            }
+
+            h1 {
+                font-size: 2.4rem;
+                line-height: 1.5;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+        .yufi {
+            .ornamen {
+                width: 60%;
+                transform: translate(10%, 28%);
+            }
+
+            .kak-yufi {
+                width: 30%;
+                transform: translate(-20%, 2%);
+            }
+        }
+    }
+
+    .konten-2 {
+
+        .box {
+            height: 80%;
+            background-color: $color_box;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                height: 50%;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    .konten-3 {
+
+        .container-1 {
+            column-gap: 5%;
+
+            .box {
+                border-radius: 1.5em;
+
+                img {
+                    border-top-left-radius: 1.5em;
+                    border-top-right-radius: 1.5em;
+                }
+
+                h3 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .container-2 {
+            column-gap: 3%;
+
+            .box {
+
+                img {
+                    width: 50px;
+                    padding: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .konten-1 {
+        height: 28%;
+        padding-left: 5%;
+
+        .box {
+            width: 80%;
+            border-radius: 12px;
+            border: 4px solid white;
+
+            .mentor {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+                line-height: 1.4;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .yufi {
+            .ornamen {
+                width: 55%;
+                transform: translate(10%, 28%);
+            }
+
+            .kak-yufi {
+                width: 28%;
+                transform: translate(-20%, 2%);
+            }
+        }
+    }
+
+    .konten-2 {
+        grid-template-areas:
+            'title title'
+            'expertise1 expertise2'
+            'expertise3 expertise4'
+        ;
+        grid-template-columns: repeat(2, 1fr);
+
+        .box {
+            height: 80%;
+            background-color: $color_box;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                height: 50%;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    .konten-3 {
+        padding-bottom: 8%;
+        grid-template-rows: auto 1fr 2.5fr;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .container-1 {
+
+            .box {
+                border-radius: 1.2em;
+
+                img {
+                    border-top-left-radius: 1.2em;
+                    border-top-right-radius: 1.2em;
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .container-2 {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 160px);
+            row-gap: 4%;
+
+            .box {
+
+                img {
+                    width: 45px;
+                    padding: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                }
             }
         }
     }
